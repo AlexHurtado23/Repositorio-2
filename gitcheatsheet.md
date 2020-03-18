@@ -1,237 +1,498 @@
-The commands for git bash
+#The commands for git bash
 
-Chapter 2:
+___
 
-For Configuration:
 
-$git config --global user.name " "
+##Chapter 2:
 
-Sets the name you want attached to your commit trasactions.
+###For Configuration:
 
+    $ git config --global user.name " "
 
-$git config --global user.email" "
+*Sets the name you want attached to your commit trasactions.*
 
-Sets the e-mail you want to attached to your commit trasactions.
 
+    $ git config --global user.email" "
 
-$git config --global color.ui auto
+*Sets the e-mail you want to attached to your commit trasactions.*
 
-Enables helpful colorization of command line output.
 
+    $ git config --global color.ui auto
 
+*Enables helpful colorization of command line output.*
 
-For Create Repositories:
 
-$git init 
+    $ git config --gloabal core.editor
 
-Turn an existent directory into a git repository.
+*Get acces to the editor.*
 
 
-$git clone [url]
+    $ git config --global alias.co checkout
 
-Clone (download) a repository that alreay exist on Github, including all of the files, branches and commits.
+*Replaces a ´git checkout´.*
 
 
+    $ git config --global alias.br branch
 
-Chapter 3:
+*Replaces a ´git branch´.*
 
-Branches: any commits you make will be made on the branch you are currently "cheked out" to. Use "git status" to see which branch that is.
 
+    $ git config --global alias.ci commit
 
-$git branch [branch-name]
+*Replaces a ´git commit´.*
 
-Creates a new branch.
 
+    $ git config --global alias.st status
 
-$git branch -v
+*Replaces a ´git status´.*
 
-To see the latest confirmation of changes in each branch.
 
+    $ git config --global alias.unstage ""
 
-$git branch -vv
+*To correct the usability problem you found when removing a file from the preparation area.*
 
-To see the tracking branches you have assigned, this will list your local branches with more information,
-including what each branch follows and whether your local branch is ahed, behind or both. 
 
+    $ git config --global alias.last ""
 
-$git branch --merged
+*Easily see what the last confirmation was. ´git last´*
 
-To see the branches that have been merged with the active branch.
 
+    $ git config --global alias.visual "!gitk"
 
-$git branch --no-merged
+*Run an external command instead of a Git subcommand. In that case, you can start the command with 
+a character (!) This is useful if you write your own tools to work with a Git repository*
 
-To show all branches containing unbound jobs.
 
+___
 
-$git branch -u
 
-If you already have a local branch and you want to assign it to a remote branch that you just brought you, or you want to change the branch that you follow up on.
+###For Create Repositories:
 
+    $ git init 
 
-$git checkout [branch-name]
+*Turn an existent directory into a git repository.*
 
-Swiches to the specified branch and updates the working directory.
 
+    $ git clone [url]
 
-$git checkout -b
+*Clone (download) a repository that alreay exist on Github, including all of the files, branches and commits.*
 
-To create a new branch and jump to it, in one step.
 
+    $ git add .
+ 
+*To specify which files you want to control.*
 
-$git checkout --track
 
-Prepare other monitoring branches if you want to have some that follow other remote branches.
+    $ git status
+*Determine which files are in what state.*
 
 
-$git checkout -b sf
+    $ git status -s
 
-To prepare a local branch with a different name than the remote one, you can use the first version with a different local branch name.
+*Get an abbreviated status, so you can see your changes in a more compact way.*
 
 
-$git merge [branch]
+    $ cat .[file]
 
-Combines the specified branch´s history into the current branch.
+*To see the content of the file.*
 
 
-$git branch -d [branch-name]
+    $ git rm
 
-Delates the specified branch.
+*To delete Git files, you need to delete them from your tracked files and then confirm.*
 
 
-$git rebase 
+    $ git rm --cached [file]
 
-Capture all committed changes in one branch and reapply them to another.
+*Keep the file in your working directory but delete it from the preparation area.*
 
-$git rebase --onto master [branch1] [branch2]
 
-You can take changes from another collaborator that are not in Branch2 and reapply them on your main branch.
+    $ git mv file_from file_to
 
+*Rename a file.*
 
-$git rebase [base-branch] [point-brach]
 
-You can reorganize the point-branch over the base-branch without even checking it beforehand, which activates the point-branch
-and applies it about the base-branch.
+    $ git remote 
 
+*It will show the names of each of the remotes you have specified.*
 
-$git rebase teamone/master 
 
+    $ git remote -v 
 
+*Shows the URLs that Git has associated with the name and that will be used when reading and writing on that remote.*
 
-Synchronize changes:
 
+    $ git remote show [remote-name]
 
-$git fetch
+*To see more information about a particular remote.*
 
-Downloads all the history from the remote tracking branches.
 
+    $ git remote rename 
 
-$git fetch origin
+*Rename a remote reference.*
 
-This command locates which server the source is on, retrieves any data present there that you don't have, and updates your local database.
 
+   $ git remote rm
 
-$git merge
+*Delete a remote.*
 
-Combines remote tracking branch into current local branch.
 
+   $ git tag 
 
-$git push
+*List available tags.*
 
-Uploads all the local branch commits to Github.
 
+   $ git -a [tag-name]
 
-$git push --force
+*Create an annotated tag in Git.*
 
-To overwrite the registry on the server.
 
+   $ git tag -m [message]
 
-$git push origin --delete [branch]
+*Specify the label message.*
 
-To deleate a remote branch.
 
+   $ git show [tag]
 
-$git pull 
+*To show the information from a specific tag.*
 
-Updates all local working branch with all new commits from the corresponding remote branch of Github.
 
+___
 
-$git pull --rebase 
 
+##Chapter 3:
 
+###Branches: any commits you make will be made on the branch you are currently "cheked out" to. Use "git status" to see which branch that is.
 
-Make Changes:
 
-$git log
+    $ git branch [branch-name]
 
-Lists version history for the current branch.
+*Creates a new branch.*
 
 
-$git log --follow [file]
+    $ git branch -v
 
-Lists version history for a file, including renames.
+*To see the latest confirmation of changes in each branch.*
 
 
-$git log --decorate
+    $ git branch -vv
 
-To show where each branch is apointed.
+*To see the tracking branches you have assigned, this will list your local branches with more information,
+including what each branch follows and whether your local branch is ahed, behind or both.*
 
 
-$git log --oneline --decorate --graph --all
+    $ git branch --merged
 
-It will show you the history of your confirmations, indicating where the pointers of your branches are and how your history has diverged.
+*To see the branches that have been merged with the active branch.*
 
 
-$git diff [first branch]...[second branch]
+    $ git branch --no-merged
 
-Shows content differences between two branches.
+*To show all branches containing unbound jobs.*
 
 
-$git show [commit]
+    $ git branch -u
 
-Outputs metadata and content changes of the specified commit.
+*If you already have a local branch, to assign it to a remote branch that you just brought you, or to change the branch that you follow up on.*
 
 
-$git add [file]
+    $ git checkout [branch-name]
 
-Snapshots the file in preparation of versioning.
+*Swiches to the specified branch and updates the working directory.*
 
 
-$git commit -m "[descriptive message]"
+    $ git checkout -b
 
-Records file snapshots permanently in version history.
+*To create a new branch and jump to it, in one step.*
 
 
+    $ git checkout --track
 
-Redo commits:
+*Prepare other monitoring branches if you want to have some that follow other remote branches.*
 
-$git reset [commit]
 
-Undoes all commits after [commit] persevering changes locally.
+    $ git checkout -b sf
 
+*To prepare a local branch with a different name than the remote one, you can use the first version with a different local branch name.*
 
-$git reset --hard [commit]
 
-Discard all history and changes back to the specified commit.
+    $ git merge [branch]
 
+*Combines the specified branch´s history into the current branch.*
 
 
-Glossary
+    $ git branch -d [branch-name]
 
-git: an opensourse, distributed version-control system.
+*Delates the specified branch.*
 
-Github: a platform for husting and collaborating on Git repositories.
 
-commit: a Git object, a snapshot of your entire repository compresed into a SHA.
+    $ git rebase 
 
-branch: a lightweight movable pointer to a commit.
+*Capture all committed changes in one branch and reapply them to another.*
 
-clone: a local version of a repository, including all commits and branches.
 
-remote: a common repository o Github that all team member use to exchange their changes.
+    $ git rebase --onto master [branch1] [branch2]
 
-fork: a copy of a repository on Github owned by a different user.
+*You can take changes from another collaborator that are not in Branch2 and reapply them on your main branch.*
 
-pull request: a place to compare and discuss the differences introduced on a branch with reviews, commits, integrated test, and more.
 
-HEAD: representing your current work directory, the HEAD pointer can be made to a different branches, tags, or commits when using "git checkout".
+    $ git rebase [base-branch] [point-brach]
+
+*You can reorganize the point-branch over the base-branch without even checking it beforehand, which activates the point-branch
+and applies it about the base-branch.*
+
+
+    $ git rebase teamone/master 
+
+___
+
+
+###Synchronize changes:
+
+
+    $ git fetch
+
+*Downloads all the history from the remote tracking branches.*
+
+
+    $ git fetch origin
+
+*This command locates which server the source is on, retrieves any data present there that you don't have, and updates your local database.*
+
+
+    $ git fetch pb
+
+*Use the name pb on the command line instead of the entire URL.*
+
+    $ git merge
+
+*Combines remote tracking branch into current local branch.*
+
+
+    $ git push
+
+*Uploads all the local branch commits to Github.*
+
+
+    $ git push --force
+
+*To overwrite the registry on the server.*
+
+
+    $ git push origin --delete [branch]
+
+*To deleate a remote branch.*
+
+
+    $ git push [remote-name] [branch-name]
+
+*When you have a project that you want to share, you must send it to a server.*
+
+
+    $ git push origin --tags
+
+*To send multiple labels at once.*
+
+
+    $ git pull 
+
+*Updates all local working branch with all new commits from the corresponding remote branch of Github.*
+
+
+    $ git pull --rebase 
+
+___
+
+
+###Make Changes:
+
+    $ git log
+
+*Lists version history for the current branch.*
+
+
+    $ git log --follow [file]
+
+*Lists version history for a file, including renames.*
+
+
+    $ git log --decorate
+
+*To show where each branch is apointed.*
+
+
+    $ git log --oneline --decorate --graph --all
+
+*It will show you the history of your confirmations, indicating where the pointers of your branches are and how your history has diverged.*
+
+
+    $ git log -p
+
+*Shows the differences introduced in each confirmation.*
+
+
+    $ git log -p -2 
+
+*Show only the last two history entries are displayed.*
+
+
+    $ git log --start
+
+*To see some statistics of each confirmation.*
+
+
+    $ git log --pretty=oneline
+
+*To modify the output format, print each confirmation on a single line.*
+
+
+    $ git log --pretty=format [extension]
+
+*To specify the out put description*
+
+-%H   Confimation hash.
+-%h   Shorthand confirmation hash.
+-%T   Tree hash.
+-%t   Shorthand tree hash.
+-%P   Hashes of parent confirmations.
+-%p   Hashes of abbreviated parent confirmations.
+-%an  Author´s name.
+-%ae  Author's email address.
+-%ad  Authorship date.
+-%ar  Authorship date, relative. 
+-%cn  Confirmer name.
+-%ce  Confirmer email address.
+-%cd  Confirmation date.
+-%cr  Confirmation date, relative.
+-%s   Affair.
+
+
+    $ git log --pretty=format: [extension] --graph
+
+*It add a little graphic.*
+
+
+    $ git log --name-only 
+
+*Displays the list of affected files.*
+
+
+    $ git log --name-status
+
+*Shows the list of affected files, also indicating if they were added, modified or deleted.*
+
+
+    $ git log --abbrev-commit
+
+*Shows only the first characters of the SHA-1 sum, instead of the 40 characters of which it is composed.*
+
+
+    $ git log --relative-date
+
+*Displays the date in relative format (for example, "2 weeks ago") instead of the full format.*
+
+
+    $ git log --(-n)
+
+*Only shows the last confirmations*
+
+
+    $ git log --since [date], --after [date]
+
+*Show those confirmations made after the specified date.*
+
+
+    $ git log --until [date], before [date]
+
+*Show those confirmations made before the specified date.*
+
+
+    $ git log --author
+
+*Show only those commits whose author matches the specified string.*
+
+
+    $ git log --committer
+
+*Shows only those commits whose commit matches the specified string.*
+
+
+    $ git log -S
+
+*Show only those commits that add or remove code that corresponds to the specified string.*
+
+
+    $ git diff [first branch]...[second branch]
+
+*Shows content differences between two branches.*
+
+
+    $ git diff --staged
+
+*To see what you have prepared and it will be included in the next confirmation.*
+
+
+    $ git diff --cached
+
+*To see what you have prepared so far.*
+
+
+    $ git show [commit]
+
+*Outputs metadata and content changes of the specified commit.*
+
+
+    $ git add [file]
+
+*Snapshots the file in preparation of versioning.*
+
+
+    $ git commit -m "[descriptive message]"
+
+*Records file snapshots permanently in version history.*
+
+
+    $ git commit --amend
+
+*Redo the confirmation.*
+
+
+    $ git 
+
+
+___
+
+
+###Redo commits:
+
+    $ git reset [commit]
+
+*Undoes all commits after [commit] persevering changes locally.*
+
+
+    $ git reset --hard [commit]
+
+*Discard all history and changes back to the specified commit.*
+
+___
+
+
+##Glossary
+
+-git: an opensourse, distributed version-control system.
+
+-Github: a platform for husting and collaborating on Git repositories.
+
+-commit: a Git object, a snapshot of your entire repository compresed into a SHA.
+
+-branch: a lightweight movable pointer to a commit.
+
+-clone: a local version of a repository, including all commits and branches.
+
+-remote: a common repository o Github that all team member use to exchange their changes.
+
+-fork: a copy of a repository on Github owned by a different user.
+
+-pull request: a place to compare and discuss the differences introduced on a branch with reviews, commits, integrated test, and more.
+
+-HEAD: representing your current work directory, the HEAD pointer can be made to a different branches, tags, or commits when using "git checkout".
