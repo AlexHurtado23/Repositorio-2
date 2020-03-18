@@ -29,22 +29,22 @@ ___
 
     $ git config --global alias.co checkout
 
-*Replaces a ´git checkout´.*
+*Replaces a 'git checkout'.*
 
 
     $ git config --global alias.br branch
 
-*Replaces a ´git branch´.*
+*Replaces a 'git branch'.*
 
 
     $ git config --global alias.ci commit
 
-*Replaces a ´git commit´.*
+*Replaces a 'git commit'.*
 
 
     $ git config --global alias.st status
 
-*Replaces a ´git status´.*
+*Replaces a 'git status'.*
 
 
     $ git config --global alias.unstage ""
@@ -132,27 +132,27 @@ ___
 *Rename a remote reference.*
 
 
-   $ git remote rm
+    $ git remote rm
 
 *Delete a remote.*
 
 
-   $ git tag 
+    $ git tag 
 
 *List available tags.*
 
 
-   $ git -a [tag-name]
+    $ git -a [tag-name]
 
 *Create an annotated tag in Git.*
 
 
-   $ git tag -m [message]
+    $ git tag -m [message]
 
 *Specify the label message.*
 
 
-   $ git show [tag]
+    $ git show [tag]
 
 *To show the information from a specific tag.*
 
@@ -350,21 +350,35 @@ ___
 
 *To specify the out put description*
 
--%H   Confimation hash.
--%h   Shorthand confirmation hash.
--%T   Tree hash.
--%t   Shorthand tree hash.
--%P   Hashes of parent confirmations.
--%p   Hashes of abbreviated parent confirmations.
--%an  Author´s name.
--%ae  Author's email address.
--%ad  Authorship date.
--%ar  Authorship date, relative. 
--%cn  Confirmer name.
--%ce  Confirmer email address.
--%cd  Confirmation date.
--%cr  Confirmation date, relative.
--%s   Affair.
+-'%H'   Confimation hash. 
+
+-'%h'   Shorthand confirmation hash.
+
+-'%T'   Tree hash. 
+
+-'%t'   Shorthand tree hash.
+
+-'%P'   Hashes of parent confirmations.
+
+-'%p'   Hashes of abbreviated parent confirmations.
+
+-'%an'  Author´s name.
+
+-'%ae'  Author's email address.
+
+-'%ad'  Authorship date.
+
+-'%ar'  Authorship date, relative. 
+
+-'%cn'  Confirmer name.
+
+-'%ce'  Confirmer email address.
+
+-'%cd'  Confirmation date.
+
+-'%cr'  Confirmation date, relative.
+
+-'%s'   Affair.
 
 
     $ git log --pretty=format: [extension] --graph
