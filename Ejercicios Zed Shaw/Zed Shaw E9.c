@@ -52,7 +52,7 @@ return 0;
 int main(int argc, char *argv[]){
 
     int numbers[4]={0};
-    char *name[4]={'a'};
+    char name[4]={'a'};
 
     //first, print them out raw
     printf("Numbers: %d %d %d %d\n",numbers[0],numbers[1],numbers[2],numbers[3]);
@@ -63,17 +63,17 @@ int main(int argc, char *argv[]){
 
 
     //setup the numbers
-    numbers[0] ='T';
-    numbers[1] ='o';
-    numbers[2] ='m';
-    numbers[3] ='\0';
+    numbers[0] = 1;
+    numbers[1] = 2;
+    numbers[2] = 3;
+    numbers[3] = 4;
 
 
     //setup the name
-    *name[0]=1;
-    *name[1]=2;
-    *name[2]=3;
-    *name[3]=4;
+    name[0]='T';
+    name[1]='o';
+    name[2]='m';
+    name[3]='\0';
 
     //then print them out initialized
     printf("Numbers: %d %d %d %d\n",numbers[0],numbers[1],numbers[2],numbers[3]);
@@ -90,12 +90,8 @@ int main(int argc, char *argv[]){
 
     printf("another each: %c %c %c %c\n",another[0],another[1],another[2],another[3]);
 
-/*
-    long num = 1024;       //4 bytes
-    char *numero = "Todd"; //4 bytes
-
-    printf("numero: %d\n",numero); //no see puede la maquina arroja un numero aleatorio
-*/
+    //print name as if it was an array of ints
+    printf("name as ints %d %d %d %d \n",another[0],another[1],another[2],another[3]);
 
 return 0;
 }
