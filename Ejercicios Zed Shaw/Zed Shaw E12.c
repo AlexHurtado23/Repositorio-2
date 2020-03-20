@@ -38,7 +38,7 @@ int main(int argc, char *argv[]){
 
         printf("You only have an argument. You suck.\n");
 
-    }else if(argc>1 && argc <4){
+    }else if(argc>1 || argc <4){
 
         printf("Here is your arguments: \n");
 
@@ -58,4 +58,9 @@ Logic operators:
 &&	Logical AND.
 ||	Logical OR.
 !	Logical NOT.
+
+Al cambiar el AND por un OR, se crea un dominio de numeros de argumentos,
+osea que te mostrara los argumentos si pones de 1 argumento hasta 4 argumentos.
+
+Al cambiar el AND por un NOT, solo te tomara en cuenta una parte de la condicion.
 */
