@@ -1,0 +1,446 @@
+   1   cd Carpeta_2
+   2   nano Practicando
+   3   cd Practicando
+   4   pwd
+   5   cd.. USERS
+   6  cd .. Users
+   7  #!/bin/bash
+   8  ##############################################################################
+   9  # SHORTCUTS
+   10  ##############################################################################
+   11  CTRL+A  # move to beginning of line
+   12  CTRL+B  # moves backward one character
+   13  CTRL+C  # halts the current command
+   14  CTRL+D  # deletes one character backward or logs out of current session, similar to exit
+   15  CTRL+E  # moves to end of line
+   16  CTRL+F  # moves forward one character
+   17  CTRL+G  # aborts the current editing command and ring the terminal bell
+   18  CTRL+J  # same as RETURN
+   19  CTRL+K  # deletes (kill) forward to end of line
+   20  CTRL+L  # clears screen and redisplay the line
+   21  CTRL+M  # same as RETURN
+   22  CTRL+N  # next line in command history
+   23  CTRL+O  # same as RETURN, then displays next line in history file
+   24  CTRL+P  # previous line in command history
+   25  CTRL+R  # searches backward
+   26  CTRL+S  # searches forward
+   27  CTRL+T  # transposes two characters
+   28  CTRL+U  # kills backward from point to the beginning of line
+   29  CTRL+V  # makes the next character typed verbatim
+   30  CTRL+W  # kills the word behind the cursor
+   31  CTRL+X  # lists the possible filename completions of the current word
+   32  CTRL+Y  # retrieves (yank) last item killed
+   33  CTRL+Z  # stops the current command, resume with fg in the foreground or bg in the background
+   34  ALT+B   # moves backward one word
+   35  ALT+D   # deletes next word
+   36  ALT+F   # moves forward one word
+   37  DELETE  # deletes one character backward
+   38  !!      # repeats the last command
+   39  exit    # logs out of current session
+   40  #!/bin/bash
+   41  ##############################################################################
+   42  # SHORTCUTS
+   43  ##############################################################################
+   44  CTRL+A  # move to beginning of line
+   45  CTRL+B  # moves backward one character
+   46  CTRL+C  # halts the current command
+   47  CTRL+D  # deletes one character backward or logs out of current session, similar to exit
+   48  CTRL+E  # moves to end of line
+   49  CTRL+F  # moves forward one character
+   50  CTRL+G  # aborts the current editing command and ring the terminal bell
+   51  CTRL+J  # same as RETURN
+   52  CTRL+K  # deletes (kill) forward to end of line
+   53  CTRL+L  # clears screen and redisplay the line
+   54  CTRL+M  # same as RETURN
+   55  CTRL+N  # next line in command history
+   56  CTRL+O  # same as RETURN, then displays next line in history file
+   57  CTRL+P  # previous line in command history
+   58  CTRL+R  # searches backward
+   59  CTRL+S  # searches forward
+   60  CTRL+T  # transposes two characters
+   61  CTRL+U  # kills backward from point to the beginning of line
+   62  CTRL+V  # makes the next character typed verbatim
+   63  CTRL+W  # kills the word behind the cursor
+   64  CTRL+X  # lists the possible filename completions of the current word
+   65  CTRL+Y  # retrieves (yank) last item killed
+   66  CTRL+Z  # stops the current command, resume with fg in the foreground or bg in the background
+   67  ALT+B   # moves backward one word
+   68  ALT+D   # deletes next word
+   69  ALT+F   # moves forward one word
+   70  DELETE  # deletes one character backward
+   71  !!      # repeats the last command
+   72  exit    # logs out of current session
+   73  ls
+   74  cd practicando
+   75  nano Bash24-03-20
+   76  mkdir Bash24-03-20
+   77  cd Bash24-03-20
+   78  mkdir stuff
+   79  cd stuff
+   80  mkdir things
+   81  cd things
+   82  mkdir Joan
+   83  cd Joan
+   84  mkdir Michael
+   85  cd Michael
+   86  pwd
+   87  cd.. Michael
+   88  cd.. 
+   89  cd .. 
+   90  cd ..
+   91  pwd
+   92  cd Micheel
+   93  cd Joen
+   94  cd Joan
+   95  cd Michael
+   96  pwd 
+   97  cd ..
+   98  cd ..
+   99  cd "Michael"
+  100  cd Joan
+  101  cd Michael
+  102  rmkdir Michael
+  103  rmdir Michael
+  104  cd ..
+  105  rmdir Michael
+  106  cd Michael
+  107  cd..
+  108  cd ..
+  109  rmdir Joan
+  110  cd Joan
+  111  mkdir estuche
+  112  mkdir celular
+  113  mkdir lapiz
+  114  cd lapiz
+  115  cd celular
+  116  cd ..
+  117  cd "stuff"
+  118  cd "lapiz"
+  119  cd ..
+  120  rmdir lapiz
+  121  rmdir celular
+  122  rmdir estuche
+  123  ls
+  124  cd ..
+  125  rmdir things
+  126  ls
+  127  cd ..
+  128  rmdir stuff
+  129  ls
+  130  mkdir temp
+  131  ls
+  132  cd temp
+  133  mkdir stuff
+  134  cd stuff
+  135  mkdir things
+  136  cd things
+  137  mkdir Frank
+  138  cd Frank
+  139  mkdir John
+  140  cd John
+  141  mkdir Alex
+  142  cd Alex
+  143  mkdir James
+  144  cd James
+  145  pwd
+  146  cd ..
+  147  cd ..
+  148  cd ..
+  149  cd ..
+  150  cd ..
+  151  cd ..
+  152  ls
+  153  cd stuff
+  154  ls
+  155  cd things
+  156  ls
+  157  cd Frank
+  158  ls
+  159  cd ../ ../
+  160  ../../../
+  161  cd ..
+  162  cd..
+  163  cd ..
+  164  cd ..
+  165  cd ..
+  166  ls
+  167  cd temp
+  168  ls
+  169  ls stuff
+  170  ls temp
+  171  ls
+  172  dir -R
+  173  pwd
+  174   ls
+  175  cd stuff
+  176  ls
+  177  cd things
+  178  ls
+  179  cd Frank
+  180  ls
+  181  cd John
+  182  ls
+  183  cd Alex
+  184  ls
+  185  cd James
+  186  ls
+  187  mkdir Juan
+  188  cd Juan
+  189  mkdir Vector
+  190  cd Vector
+  191  mkdir Peter
+  192  cd Peter
+  193  mkdir Lupe
+  194  cd Lupe
+  195  mkdir Rich
+  196  cd Rich
+  197  cd Rose
+  198  mkdir Rose
+  199  cd Rose
+  200  mkdir Seb
+  201  cd Seb
+  202  mkdir Rapha
+  203  cd Rapha
+  204  mdkir Shiro
+  205  mkdir Shiro
+  206  cd Shiro
+  207  mkdir July
+  208  cd July
+  209  mkdir Pepe
+  200  cd Pepe
+  211  rmdir Pepe
+  212  cd ..
+  213  ls
+  214  rmdir Pepe
+  215  ls
+  216  cd ..
+  217  ls
+  218  rmdir July
+  219  ls
+  210  cd ..
+  221  ls
+  222  rmdir Shiro
+  223  ls
+  224  cd ..
+  225  ls
+  226  rmdir Rafa
+  227  ls
+  228  cd ..
+  229  ls
+  230  rmdir Seb
+  231  ls
+  232  cd ..
+  233  ls
+  234  rmdir Rose
+  235  ls
+  236  cd ..
+  237  ls
+  238  rmdir Rich
+  239  ls
+  240  cd ..
+  241  ls
+  242  rmdir Lupe
+  243  ls
+  244  cd ..
+  245  ls
+  246  rmdir Peter
+  247  ls
+  248  ls
+  249  cd ..
+  250  ls
+  251  rmdir Vector
+  252  ls
+  253  cd ..
+  254  ls
+  255  rmdir Juan
+  256  ls
+  257  cd..
+  258  cd ..
+  259  ls
+  260  rmdir James
+  261  ls
+  262  cd ..
+  263  ls
+  264  rmdir Alex
+  265  mkdir -p
+  266  pushd stuff/things/Frank/John
+  267  popd
+  268  pwd
+  269  cd ..
+  270  popd
+  271  pushd
+  272  cd ..
+  273  cd ..
+  274  cd ..
+  275  pushd stuff
+  276  popd
+  277  pushd stuff/things
+  278  popd
+  279  mkdir -p
+  280  ls
+  281  cd stuff
+  282  ls
+  283  cd things
+  284  ls
+  285  cd Frank
+  286  ls
+  287  cd John
+  288  ls
+  289  cd ..
+  290  ls
+  291  rmdir John
+  292  ls
+  293  cd ..
+  294  ls
+  295  rmdir Frank
+  296  ls
+  297  cd ..
+  298  ls
+  299  rmdir thins
+  300  rmdir things
+  301  ls
+  302  cd ..
+  303  ls
+  304  rmdir stuff
+  305  ls
+  306  cd..
+  307  cd ..
+  308  cd temp
+  309  New-Itemm iamcool.txt -type file
+  310  touch iamcool.txt
+  311  ls
+  312  cp iamcool.txt neat.txt
+  313  ls
+  314  cp neat.txt awesome.txt
+  315  ls
+  316  cp awesome.txt thefourthfile.txt
+  317  ls
+  318  mkdir something
+  319  ls
+  320  cp awesome.txt something/
+  321  ls
+  322  ls something/
+  323  cp -r something newplace
+  324  ls newplace/
+  325  cp -r iamcool.txt neat.txt newplace/
+  326  ls
+  327  ls newplace/
+  328  cd
+  329  cd..
+  330  cd ..
+  331  cd ..
+  332  ls
+  333  cd windows
+  334  ls
+  335  cd ..
+  336  ls
+  337  Users
+  338  cd Users
+  339  ls
+  340  cd Public
+  341  ls
+  342  cd desktop. ini
+  343  cd Carpeta_2
+  344  ls
+  345  cd ..
+  346  cd Downloads
+  347  ls
+  348  cd ..
+  349  cd ..
+  350  ls
+  351  cd ..
+  352  cd Windows
+  353  ls
+  354  cd ..
+  355  ls
+  356  Users
+  357  ls
+  358  cd Users
+  359  ls
+  360  cd USER
+  361  LS
+  362  cd Reciente 
+  363  ls
+  364  cd ..
+  365  ls
+  366  cd Practicando
+  367  ls
+  368  cd Bash24-03-20
+  369  ls
+  370  cd temp
+  371  ls
+  372  mv awesome.txt uncool.txt
+  373  ls
+  374  pwd
+  375  ls
+  376  mv newplace oldplace
+  377  ls
+  378  mv oldplace newplace
+  379  ls
+  380  mv newplace otherplace
+  381  ls
+  382  mv otherplace newplace
+  383  ls
+  384  cd 
+  385  ls
+  386  cd Practicando
+  387  ls
+  388  cd Bash24-03-20
+  389  ls
+  390  mkdir othertemp
+  391  cd othertemp
+  392  ls
+  393  mkdir ex12.txt
+  394  ls
+  395  rmdir ex12.txt
+  396  ls
+  397  nano ex12.txt
+  398  ls
+  399  less ex12.txt
+  400  more ex12.txt
+  401  nano ex12.txt
+  402  nano ex12.txt
+  403  nano ex13.txt 
+  404  ls
+  405  less ex13.txt
+  406  cat ex13.txt
+  407  cat ex12.txt
+  408  q
+  409  ls
+  410  nano ex14.txt
+  411  cat ex14.txt
+  412  ls
+  413  rm ex12.txt 
+  414  ls
+  415  rm ex13.txt ex14.txt
+  416  ls
+  417  cd
+  418  ls
+  419  cd Practicando
+  420  ls
+  421  cd Bash24-03-20
+  422  ls
+  423  temp
+  424  ls
+  425  cd temp
+  426  ls
+  427  rmdir something
+  428  rmdir somethin/
+  429  ls
+  430  rm iamcool.txt
+  431  ls
+  432  rm neat.txt thefourthfile.txt uncool.txt
+  433  ls
+  434  cp -r something newplace
+  435  ls
+  436  rm something/awesome.txt
+  437  ls
+  438  rmdir something
+  439  rm -rf newplace
+  440  ls
+  441  cd temp
+  442  cd ..
+  443  ls
+  444  rmdir othertemp
+  445  ls
+  446  history > ejercicios24-03-20.txt
